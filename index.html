@@ -265,14 +265,6 @@
 
   <div class="content">
 
-    <!-- 承認欄 -->
-    <div class="approval">
-      <div class="stamp"><span style="font-size:9px;color:#718096">社長</span><div style="height:18px"></div></div>
-      <div class="stamp"><span style="font-size:9px;color:#718096">営業本部</span><div style="height:18px"></div></div>
-      <div class="stamp"><span style="font-size:9px;color:#718096">支店長</span><div style="height:18px"></div></div>
-      <div class="stamp"><span style="font-size:9px;color:#718096">担当</span><div style="height:18px"></div></div>
-    </div>
-
     <!-- ① 物件情報 & 評価額 -->
     <span class="section-title">① 物件情報</span>
     <div class="card mb-18">
@@ -347,6 +339,14 @@
                 <td>
                   仲介手数料
                   <button class="auto-btn is-auto no-print" id="abtn-saleBroker" onclick="toggleAuto('saleBroker')">✓ 自動</button>
+                  <div class="broker-wrap no-print">
+                    <div class="broker-label-sm">仲介の有無：</div>
+                    <div class="toggle-group">
+                      <button class="toggle-btn" id="sbtn-nashi" onclick="setSaleBroker(false)">仲介なし（0円）</button>
+                      <button class="toggle-btn active" id="sbtn-ari" onclick="setSaleBroker(true)">仲介あり</button>
+                    </div>
+                  </div>
+                  <span class="broker-print-label" id="saleBrokerPrintLabel">仲介あり</span>
                 </td>
                 <td class="text-muted" id="saleBrokerNote">売上×3%+6万×1.1 / ≤800万は33万</td>
                 <td>
@@ -417,8 +417,15 @@
                 <td>
                   取得税（土地）
                   <button class="auto-btn is-auto no-print" id="abtn-acquiLand" onclick="toggleAuto('acquiLand')">✓ 自動</button>
+                  <div class="broker-wrap no-print" style="margin-top:3px;">
+                    <div class="broker-label-sm">1/2特例：</div>
+                    <div class="toggle-group">
+                      <button class="toggle-btn active" id="abtn-half-on" onclick="setAcquiHalf(true)">適用（×½）</button>
+                      <button class="toggle-btn" id="abtn-half-off" onclick="setAcquiHalf(false)">不適用（×1）</button>
+                    </div>
+                  </div>
                 </td>
-                <td class="text-muted">評価額×½×3%</td>
+                <td class="text-muted" id="acquiLandNote">評価額×½×3%</td>
                 <td>
                   <span class="auto-val" id="auto-acquiLand">— 円</span>
                   <input class="edit-num auto-manual-input" id="mnl-acquiLand" type="text" placeholder="0" />
@@ -517,7 +524,9 @@
           <div style="display:flex;justify-content:space-between;font-size:11px;color:#718096;margin-top:3px;">
             <span>0%</span><span>10%</span>
           </div>
-          <div class="text-muted" style="margin-top:6px;font-size:11px;">参考：目安利益率 10%</div>
+          <div class="text-muted" style="margin-top:6px;font-size:11px;">
+            目安利益率：<input type="text" id="targetRate" value="10" style="width:40px;text-align:right;border:none;border-bottom:1px dashed #68d391;background:transparent;font-size:11px;font-family:inherit;outline:none;" /> %
+          </div>
         </div>
       </div>
     </div>
@@ -578,42 +587,11 @@
           </table>
         </div>
       </div>
-      <div>
-        <span class="section-title">仲介手数料　計算表（参考）</span>
-        <div class="card">
-          <div class="commission-head">開連会社の仕入</div>
-          <table class="rt" style="margin-bottom:10px;">
-            <thead><tr><th>区分</th><th>料率</th><th>加算</th><th>備考</th></tr></thead>
-            <tbody>
-              <tr><td>①売主仲介有</td><td style="text-align:right;">3%</td><td>+0円</td><td>両手6%+6万</td></tr>
-              <tr><td>②売主仲介無</td><td style="text-align:right;">5%</td><td>+0円</td><td>片手5%</td></tr>
-              <tr><td>③業者支払あり</td><td style="text-align:right;">3%</td><td>+6万円</td><td>支払後2%</td></tr>
-            </tbody>
-          </table>
-          <div class="commission-head">桂不動産の仕入</div>
-          <table class="rt">
-            <thead><tr><th>区分</th><th>料率</th><th>加算</th><th>備考</th></tr></thead>
-            <tbody>
-              <tr><td>①直仕入</td><td style="text-align:right;">5%</td><td>+0円</td><td>片手5%</td></tr>
-              <tr><td>②業者支払あり</td><td style="text-align:right;">5%</td><td>+6万円</td><td>支払後2%</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </div>
 
     <!-- 特記事項 -->
     <span class="section-title">特記事項</span>
     <textarea class="notes-area mb-18" id="notes" placeholder="特記事項を入力してください"></textarea>
-
-    <!-- 契約書作成部数 -->
-    <span class="section-title">契約書作成部数</span>
-    <div class="card">
-      <table class="info-table">
-        <tr><th>販売・契約書</th><td>一部</td></tr>
-        <tr><th>買取・契約書</th><td>二部</td></tr>
-      </table>
-    </div>
 
   </div><!-- /content -->
 
@@ -643,7 +621,9 @@ const AUTO = {
 const CALC = {};
 
 // 仲介有無
-let buyBrokerPresent = true;
+let buyBrokerPresent  = true;
+let saleBrokerPresent = true;
+let acquiHalfApply    = true; // 不動産取得税 土地 1/2特例
 
 // ===== 数値フォーマット =====
 function parseNum(val) {
@@ -726,6 +706,30 @@ function setBroker(present) {
   recalc();
 }
 
+// ===== 販売仲介有無トグル =====
+function setSaleBroker(present) {
+  saleBrokerPresent = present;
+  document.getElementById('sbtn-ari').classList.toggle('active', present);
+  document.getElementById('sbtn-nashi').classList.toggle('active', !present);
+  document.getElementById('saleBrokerPrintLabel').textContent = present ? '仲介あり' : '仲介なし（0円）';
+  const noteEl = document.getElementById('saleBrokerNote');
+  if (present) {
+    noteEl.innerHTML = '売上×3%+6万×1.1 / ≤800万は33万';
+  } else {
+    noteEl.innerHTML = '<span style="color:#e53e3e;font-weight:700;">仲介なし → 0円</span>';
+  }
+  recalc();
+}
+
+// ===== 取得税 土地 1/2特例トグル =====
+function setAcquiHalf(apply) {
+  acquiHalfApply = apply;
+  document.getElementById('abtn-half-on').classList.toggle('active', apply);
+  document.getElementById('abtn-half-off').classList.toggle('active', !apply);
+  document.getElementById('acquiLandNote').textContent = apply ? '評価額×½×3%' : '評価額×3%';
+  recalc();
+}
+
 // ===== メイン計算 =====
 function recalc() {
   const salePrice  = getVal('salePrice');
@@ -742,11 +746,11 @@ function recalc() {
   document.getElementById('buildTsubo').textContent = bt > 0 ? bt.toFixed(2) : '—';
 
   // === 自動値の計算 ===
-  CALC.saleBroker    = calcBrokerFee(salePrice);
+  CALC.saleBroker    = saleBrokerPresent ? calcBrokerFee(salePrice) : 0;
   CALC.saleStamp     = calcStamp(salePrice);
   CALC.transferLand  = Math.floor(landEval  * 0.015);
   CALC.transferBuild = Math.floor(buildEval * 0.020);
-  CALC.acquiLand     = Math.floor(landEval  * 0.5 * 0.03);
+  CALC.acquiLand     = Math.floor(landEval  * (acquiHalfApply ? 0.5 : 1.0) * 0.03);
   CALC.acquiBuild    = Math.floor(buildEval * 0.03);
   CALC.buyBroker     = buyBrokerPresent ? calcBrokerFee(buyPrice) : 0;
   CALC.buyStamp      = calcStamp(buyPrice);
@@ -815,13 +819,14 @@ function recalc() {
     pa.style.color = profit >= 0 ? '#276749' : '#c53030';
     pr.textContent = rate.toFixed(2) + ' %';
     pr.style.color = rate >= 0 ? '#276749' : '#c53030';
-    const bw = Math.min(Math.max(rate / 10 * 100, 0), 100);
+    const targetRate = parseFloat(document.getElementById('targetRate').value) || 10;
+    const bw = Math.min(Math.max(rate / targetRate * 100, 0), 100);
     const bar = document.getElementById('p-bar');
     bar.style.width = bw + '%';
     bar.style.background =
-      rate >= 5 ? 'linear-gradient(90deg,#38a169,#68d391)'
-    : rate >= 0 ? 'linear-gradient(90deg,#d69e2e,#f6e05e)'
-                : 'linear-gradient(90deg,#c53030,#fc8181)';
+      rate >= targetRate * 0.5 ? 'linear-gradient(90deg,#38a169,#68d391)'
+    : rate >= 0               ? 'linear-gradient(90deg,#d69e2e,#f6e05e)'
+                              : 'linear-gradient(90deg,#c53030,#fc8181)';
   } else {
     pa.textContent = '— 円';  pa.style.color = '#276749';
     pr.textContent = '— %';   pr.style.color = '#276749';
@@ -879,6 +884,9 @@ document.getElementById('companyName').addEventListener('input', function() {
 setDate();
 setupNumInputs();
 setBroker(true);
+setSaleBroker(true);
+setAcquiHalf(true);
+document.getElementById('targetRate').addEventListener('input', recalc);
 recalc();
 </script>
 </body>
