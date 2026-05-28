@@ -9,55 +9,34 @@
 
     body {
       font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-      background: #f0f4f8;
-      color: #1a202c;
-      line-height: 1.6;
-      font-size: 14px;
+      background: #f0f4f8; color: #1a202c; line-height: 1.6; font-size: 14px;
     }
 
-    /* ===== Page ===== */
     .page {
-      max-width: 1100px;
-      margin: 32px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-      overflow: hidden;
+      max-width: 1100px; margin: 32px auto; background: #fff;
+      border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); overflow: hidden;
     }
 
     /* ===== Header ===== */
     .page-header {
       background: linear-gradient(135deg, #1a3c6e 0%, #2563a8 100%);
-      color: #fff;
-      padding: 24px 32px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 12px;
+      color: #fff; padding: 24px 32px 20px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+      flex-wrap: wrap; gap: 12px;
     }
     .page-header .title-block { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .page-header h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.04em; }
     .confidential {
       background: #e53e3e; color: #fff; font-size: 11px; font-weight: 700;
-      padding: 2px 8px; border-radius: 4px; letter-spacing: 0.08em; white-space: nowrap;
+      padding: 2px 8px; border-radius: 4px; letter-spacing: 0.08em;
     }
     .page-header .meta { text-align: right; font-size: 13px; opacity: 0.9; }
     .header-company-input {
-      background: transparent;
-      border: none;
+      background: transparent; border: none;
       border-bottom: 1px dashed rgba(255,255,255,0.5);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 700;
-      font-family: inherit;
-      outline: none;
-      width: 220px;
-      padding: 2px 4px;
-      margin-bottom: 4px;
-      display: block;
+      color: #fff; font-size: 16px; font-weight: 700; font-family: inherit;
+      outline: none; width: 240px; padding: 2px 4px; margin-bottom: 4px; display: block;
     }
-    .header-company-input::placeholder { color: rgba(255,255,255,0.5); }
     .header-company-input:focus { border-bottom-color: #fff; background: rgba(255,255,255,0.1); border-radius: 3px; }
 
     /* Print button */
@@ -66,10 +45,9 @@
       background: rgba(255,255,255,0.18); color: #fff;
       border: 1px solid rgba(255,255,255,0.45); border-radius: 6px;
       padding: 6px 14px; font-size: 13px; cursor: pointer; font-family: inherit;
-      transition: background 0.15s; white-space: nowrap;
+      transition: background 0.15s;
     }
     .print-btn:hover { background: rgba(255,255,255,0.32); }
-    .print-btn svg { flex-shrink: 0; }
 
     /* ===== Content ===== */
     .content { padding: 24px 32px 32px; }
@@ -84,11 +62,10 @@
     /* ===== Cards ===== */
     .card { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; margin-bottom: 18px; }
     .card.highlight { background: #ebf4ff; border-color: #90cdf4; }
-    .card.success { background: #f0fff4; border-color: #68d391; }
+    .card.success   { background: #f0fff4; border-color: #68d391; }
 
     /* ===== Grid ===== */
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
 
     /* ===== Info table ===== */
     .info-table { width: 100%; border-collapse: collapse; }
@@ -107,11 +84,11 @@
     .edit-num {
       text-align: right; background: transparent;
       border: 1px dashed #c0d4f0; border-radius: 3px;
-      padding: 1px 5px; font-family: inherit; font-size: inherit;
-      font-weight: inherit; color: inherit; width: 130px; outline: none;
+      padding: 2px 6px; font-family: inherit; font-size: inherit;
+      font-weight: inherit; color: inherit; width: 140px; outline: none;
     }
     .edit-num:focus { background: #ebf4ff; border-color: #2563a8; }
-    .edit-num.wide { width: 160px; }
+    .edit-num.wide { width: 170px; }
 
     /* ===== Sale price hero ===== */
     .price-hero {
@@ -124,7 +101,7 @@
     .price-hero .amount-input {
       background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5);
       color: #fff; font-size: 28px; font-weight: 800; font-family: inherit;
-      width: 220px; text-align: right; outline: none; letter-spacing: -0.02em;
+      width: 250px; text-align: right; outline: none;
     }
     .price-hero .amount-input:focus { border-bottom-color: #fff; background: rgba(255,255,255,0.1); border-radius: 3px; }
     .price-hero .unit { font-size: 16px; font-weight: 600; }
@@ -136,25 +113,40 @@
       background: #2563a8; color: #fff; padding: 7px 10px; font-size: 12px; text-align: left;
     }
     .expense-table thead th:last-child { text-align: right; }
-    .expense-table tbody td { padding: 7px 10px; border-bottom: 1px solid #e2e8f0; font-size: 13px; }
-    .expense-table tbody td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .expense-table tbody td { padding: 6px 10px; border-bottom: 1px solid #e2e8f0; font-size: 13px; vertical-align: middle; }
+    .expense-table tbody td:last-child { text-align: right; white-space: nowrap; }
     .expense-table tbody tr:nth-child(even) td { background: #f7fafc; }
     .expense-table tfoot td {
       padding: 9px 10px; font-weight: 700; background: #ebf4ff; border-top: 2px solid #90cdf4;
     }
     .expense-table tfoot td:last-child { text-align: right; color: #2563a8; }
 
+    /* Sub-group header */
+    .expense-table .group-hd td {
+      background: #edf2f7; color: #4a5568; font-weight: 700; font-size: 12px;
+      padding: 5px 10px; border-bottom: 1px solid #e2e8f0;
+    }
+    .expense-table .group-hd td:first-child { padding-left: 10px; }
+    .expense-table .sub-row td { padding-left: 20px; }
+    .expense-table .sub-total td {
+      background: #f0f4ff; font-weight: 700; font-size: 12px;
+      color: #4a5568; border-top: 1px solid #c8d8f0;
+    }
+    .expense-table .sub-total td:last-child { color: #2563a8; text-align: right; }
+
     .badge {
       display: inline-block; font-size: 11px; color: #718096; background: #e2e8f0;
-      border-radius: 3px; padding: 1px 5px; margin-left: 5px; font-weight: 400;
+      border-radius: 3px; padding: 1px 5px; margin-left: 4px; font-weight: 400;
+    }
+    .calc-badge {
+      display: inline-block; font-size: 10px; background: #bee3f8; color: #2c5282;
+      border-radius: 3px; padding: 1px 5px; margin-left: 4px; vertical-align: middle;
     }
 
     /* ===== Broker toggle ===== */
     .broker-toggle-wrap { margin-top: 6px; }
     .broker-toggle-wrap .toggle-label { font-size: 11px; color: #718096; margin-bottom: 4px; }
-    .toggle-group {
-      display: inline-flex; border: 1px solid #cbd5e0; border-radius: 6px; overflow: hidden;
-    }
+    .toggle-group { display: inline-flex; border: 1px solid #cbd5e0; border-radius: 6px; overflow: hidden; }
     .toggle-btn {
       padding: 4px 12px; font-size: 12px; cursor: pointer; background: #f7fafc;
       border: none; font-family: inherit; font-weight: 600; transition: all 0.15s; color: #4a5568;
@@ -162,8 +154,6 @@
     .toggle-btn:first-child { border-right: 1px solid #cbd5e0; }
     .toggle-btn.active { background: #2563a8; color: #fff; }
     .toggle-btn:hover:not(.active) { background: #e2e8f0; }
-
-    /* Print: show selected broker as text */
     .broker-print-label { display: none; font-size: 11px; color: #718096; }
 
     /* ===== Summary ===== */
@@ -173,82 +163,59 @@
     }
     .summary-row:last-child { border-bottom: none; }
     .summary-row .lbl { color: #4a5568; }
-    .summary-row .val { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .summary-row .val { font-weight: 700; }
     .summary-row.total {
       background: #2563a8; color: #fff; border-radius: 6px; margin-top: 6px;
       border-bottom: none; padding: 10px 12px;
     }
     .summary-row.total .lbl { color: rgba(255,255,255,0.85); }
     .summary-row.total .val { font-size: 20px; }
-
     .profit-card { text-align: center; padding: 20px; }
     .profit-amount { font-size: 30px; font-weight: 800; color: #276749; }
-    .profit-rate { font-size: 20px; font-weight: 800; color: #276749; }
+    .profit-rate   { font-size: 20px; font-weight: 800; color: #276749; }
     .profit-bar-track { background: #e2e8f0; border-radius: 999px; height: 10px; overflow: hidden; margin: 8px 0 3px; }
-    .profit-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #38a169, #68d391); transition: width 0.4s; }
+    .profit-bar-fill  { height: 100%; border-radius: 999px; background: linear-gradient(90deg,#38a169,#68d391); transition: width 0.4s; }
 
-    /* ===== Rate / stamp tables ===== */
+    /* ===== Small tables ===== */
     .rate-table { width: 100%; border-collapse: collapse; font-size: 12px; }
     .rate-table th, .rate-table td { padding: 5px 8px; border: 1px solid #e2e8f0; }
     .rate-table thead th { background: #edf2f7; color: #4a5568; font-weight: 600; text-align: center; }
     .rate-table td:last-child { text-align: right; }
     .rate-table tr:nth-child(even) td { background: #f7fafc; }
     .rate-table .hl td { background: #fefcbf !important; font-weight: 700; }
-
-    /* ===== Commission tables ===== */
     .commission-head {
       font-size: 12px; font-weight: 700; color: #4a5568;
       margin: 8px 0 5px; padding-left: 7px; border-left: 3px solid #2563a8;
     }
 
-    /* ===== Approval stamps ===== */
+    /* ===== Approval ===== */
     .approval { display: flex; gap: 10px; justify-content: flex-end; margin-bottom: 18px; }
     .stamp {
       width: 64px; height: 64px; border: 2px solid #2563a8; border-radius: 4px;
-      display: flex; flex-direction: column; align-items: center; justify-content: space-around;
-      font-size: 10px; color: #2563a8; font-weight: 600; padding: 3px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 4px; font-size: 10px; color: #2563a8; font-weight: 600;
     }
-    .stamp .role { font-size: 9px; color: #718096; }
 
-    /* ===== Notes textarea ===== */
     .notes-area {
       border: 1px solid #e2e8f0; border-radius: 6px; min-height: 70px; padding: 10px;
       font-size: 13px; color: #4a5568; background: #fafafa; resize: vertical;
       width: 100%; font-family: inherit;
     }
-
-    /* ===== Footer ===== */
     .page-footer {
       background: #f7fafc; border-top: 1px solid #e2e8f0; padding: 12px 32px;
       display: flex; justify-content: space-between; align-items: center;
       font-size: 12px; color: #a0aec0; flex-wrap: wrap; gap: 8px;
     }
-
-    /* ===== Utility ===== */
-    .mb-4  { margin-bottom: 4px; }
-    .mb-12 { margin-bottom: 12px; }
+    .divider { border: none; border-top: 1px solid #e2e8f0; margin: 20px 0; }
     .mb-18 { margin-bottom: 18px; }
     .mb-24 { margin-bottom: 24px; }
-    .divider { border: none; border-top: 1px solid #e2e8f0; margin: 20px 0; }
     .text-muted { color: #718096; font-size: 12px; }
     .fw-700 { font-weight: 700; }
     .color-blue { color: #2563a8; }
-    .color-red  { color: #e53e3e; }
-    .text-right { text-align: right; }
 
-    /* ===== Auto-calc indicator ===== */
-    .calc-badge {
-      display: inline-block; font-size: 10px; background: #bee3f8; color: #2c5282;
-      border-radius: 3px; padding: 1px 5px; margin-left: 4px; vertical-align: middle;
-    }
-
-    /* ===== Responsive ===== */
     @media (max-width: 720px) {
-      .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      .page-header { flex-direction: column; align-items: flex-start; }
-      .page-header .meta { text-align: left; }
+      .grid-2 { grid-template-columns: 1fr; }
       .content { padding: 16px; }
-      .price-hero .amount-input { font-size: 22px; width: 180px; }
     }
 
     /* ===== PRINT ===== */
@@ -257,31 +224,16 @@
       @page { margin: 12mm; size: A4; }
       .page { box-shadow: none; margin: 0; max-width: 100%; border-radius: 0; }
       .no-print { display: none !important; }
-
-      /* Preserve header gradient */
       .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-
-      /* Inputs look like plain text */
-      input, textarea {
-        border: none !important; border-bottom: none !important;
-        background: transparent !important; padding: 0 !important;
-        font-size: inherit !important; width: auto !important;
-        -webkit-appearance: none;
-      }
+      input, textarea { border: none !important; background: transparent !important; padding: 0 !important; -webkit-appearance: none; }
       .price-hero .amount-input { font-size: 22pt !important; }
-      .header-company-input { font-size: 13pt !important; color: #fff !important; }
-      .edit-num { width: auto !important; text-align: right; }
-
-      /* Show broker selection as text */
+      .header-company-input { color: #fff !important; }
       .broker-toggle-wrap { display: none !important; }
       .broker-print-label { display: inline !important; }
-
-      /* Table page-break control */
-      .grid-2 { display: grid !important; }
+      .calc-badge { display: none !important; }
       table { page-break-inside: avoid; }
-      .card { page-break-inside: avoid; }
+      .card  { page-break-inside: avoid; }
       .ref-section { page-break-before: always; }
-
       .page-footer { display: none; }
       .stamp { border-color: #000 !important; color: #000 !important; }
     }
@@ -297,28 +249,27 @@
       <span class="confidential">社外秘</span>
     </div>
     <div class="meta">
-      <input class="header-company-input" id="companyName"
-             type="text" value="㈲ビーイング" placeholder="会社名を入力" />
+      <input class="header-company-input" id="companyName" type="text" placeholder="会社名を入力" />
       <div id="docDate"></div>
     </div>
     <button class="print-btn no-print" onclick="window.print()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
         <rect x="6" y="14" width="12" height="8"/>
       </svg>
       印刷
     </button>
   </div>
 
-  <!-- ===== CONTENT ===== -->
   <div class="content">
 
     <!-- 承認欄 -->
     <div class="approval">
-      <div class="stamp"><div class="role">社長</div><div style="height:24px"></div></div>
-      <div class="stamp"><div class="role">営業本部</div><div style="height:24px"></div></div>
-      <div class="stamp"><div class="role">支店長</div><div style="height:24px"></div></div>
-      <div class="stamp"><div class="role">担当</div><div style="height:24px"></div></div>
+      <div class="stamp"><span style="font-size:9px;color:#718096;">社長</span><div style="height:20px;"></div></div>
+      <div class="stamp"><span style="font-size:9px;color:#718096;">営業本部</span><div style="height:20px;"></div></div>
+      <div class="stamp"><span style="font-size:9px;color:#718096;">支店長</span><div style="height:20px;"></div></div>
+      <div class="stamp"><span style="font-size:9px;color:#718096;">担当</span><div style="height:20px;"></div></div>
     </div>
 
     <!-- ① 物件情報 -->
@@ -327,23 +278,23 @@
       <table class="info-table">
         <tr>
           <th>所有者</th>
-          <td><input class="edit-text fw-700" id="ownerName" type="text" value="黒澤 昌寛" /></td>
+          <td><input class="edit-text fw-700" id="ownerName" type="text" placeholder="氏名を入力" /></td>
         </tr>
         <tr>
           <th>所在地</th>
-          <td><input class="edit-text" id="address" type="text" value="ひたちなか市大字中根字澤谷津 3313-3、3313-5" /></td>
+          <td><input class="edit-text" id="address" type="text" placeholder="住所を入力" /></td>
         </tr>
         <tr>
           <th>土地面積</th>
           <td>
-            <input class="edit-num" id="landArea" type="number" value="305" step="0.01" oninput="recalc()" style="width:90px" />
-            ㎡　<span class="text-muted">（<span id="landTsubo">92.26</span> 坪）</span>
+            <input class="edit-num" id="landArea" type="text" placeholder="0" style="width:90px" />
+            ㎡　<span class="text-muted">（<span id="landTsubo">—</span> 坪）</span>
           </td>
         </tr>
         <tr>
           <th>建物面積</th>
           <td>
-            <input class="edit-num" id="buildArea" type="number" value="0" step="0.01" oninput="recalc()" style="width:90px" />
+            <input class="edit-num" id="buildArea" type="text" placeholder="0" style="width:90px" />
             ㎡　<span class="text-muted">（<span id="buildTsubo">—</span> 坪）</span>
           </td>
         </tr>
@@ -355,10 +306,10 @@
       <div>
         <div class="label">② 販売価格（売上）</div>
         <div class="amount-wrap">
-          <input class="amount-input" id="salePrice" type="number" value="35800000" step="10000" oninput="recalc()" />
+          <input class="amount-input" id="salePrice" type="text" placeholder="0" />
           <span class="unit">円</span>
         </div>
-        <div class="tsubo">坪単価　<span id="saleTsuboPrice">38.80</span> 万円</div>
+        <div class="tsubo">坪単価　<span id="saleTsuboPrice">—</span> 万円</div>
       </div>
     </div>
 
@@ -372,32 +323,81 @@
           <table class="expense-table">
             <thead><tr><th>項目</th><th>備考</th><th>費用</th></tr></thead>
             <tbody>
-              <tr>
-                <td>商品化経費</td>
-                <td class="text-muted">リフォーム等</td>
-                <td><input class="edit-num" id="renovCost" type="number" value="0" step="1000" oninput="recalc()" /></td>
+
+              <!-- 商品化経費グループ -->
+              <tr class="group-hd"><td colspan="3">商品化経費</td></tr>
+              <tr class="sub-row">
+                <td>測量費</td>
+                <td class="text-muted">境界確認・測量</td>
+                <td><input class="edit-num" id="c-survey" type="text" placeholder="0" /></td>
               </tr>
-              <tr>
+              <tr class="sub-row">
+                <td>解体費</td>
+                <td class="text-muted">建物・構造物解体</td>
+                <td><input class="edit-num" id="c-demo" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-row">
+                <td>清掃・片付け費</td>
+                <td class="text-muted">残置物撤去・清掃</td>
+                <td><input class="edit-num" id="c-clean" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-row">
+                <td>内装工事費</td>
+                <td class="text-muted">クロス・床・水回り等</td>
+                <td><input class="edit-num" id="c-interior" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-row">
+                <td>外構工事費</td>
+                <td class="text-muted">庭・フェンス・駐車場</td>
+                <td><input class="edit-num" id="c-exterior" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-row">
+                <td>設備修繕費</td>
+                <td class="text-muted">給排水・電気・空調</td>
+                <td><input class="edit-num" id="c-equip" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-row">
+                <td>廃棄物処理費</td>
+                <td class="text-muted">産廃・一般廃棄物</td>
+                <td><input class="edit-num" id="c-waste" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-row">
+                <td>その他工事費</td>
+                <td class="text-muted">補修・雑工事等</td>
+                <td><input class="edit-num" id="c-other" type="text" placeholder="0" /></td>
+              </tr>
+              <tr class="sub-total">
+                <td colspan="2">　商品化経費　小計</td>
+                <td id="renovSubtotal">— 円</td>
+              </tr>
+
+              <!-- 販売コスト -->
+              <tr class="group-hd"><td colspan="3">販売コスト</td></tr>
+              <tr class="sub-row">
                 <td>仲介手数料<span class="calc-badge no-print">自動</span></td>
-                <td class="text-muted">
-                  販売価格 × 3% × 1.1<span class="badge">買主仲介有</span>
-                </td>
-                <td id="saleBrokerFee">1,181,400 円</td>
+                <td class="text-muted">売上 × 3% × 1.1<span class="badge">買主仲介有</span></td>
+                <td id="saleBrokerFee">— 円</td>
               </tr>
-              <tr>
+              <tr class="sub-row">
                 <td>収入印紙代</td>
                 <td class="text-muted">契約書一部・買主負担</td>
-                <td><input class="edit-num" id="saleStamp" type="number" value="0" step="1000" oninput="recalc()" /></td>
+                <td><input class="edit-num" id="saleStamp" type="text" placeholder="0" /></td>
               </tr>
-              <tr>
+              <tr class="sub-row">
                 <td>ネット掲載コスト</td>
                 <td class="text-muted">各ポータルサイト</td>
-                <td><input class="edit-num" id="netCost" type="number" value="50000" step="1000" oninput="recalc()" /></td>
+                <td><input class="edit-num" id="netCost" type="text" placeholder="0" /></td>
               </tr>
+              <tr class="sub-row">
+                <td>広告・チラシ費</td>
+                <td class="text-muted">折込・ポスティング等</td>
+                <td><input class="edit-num" id="adCost" type="text" placeholder="0" /></td>
+              </tr>
+
             </tbody>
             <tfoot><tr>
               <td colspan="2">販売経費　合計</td>
-              <td id="saleTotal">1,231,400 円</td>
+              <td id="saleTotal">— 円</td>
             </tr></tfoot>
           </table>
         </div>
@@ -412,46 +412,52 @@
             <tbody>
               <tr>
                 <td>仲介業者</td>
-                <td colspan="2" style="color:#2563a8; font-weight:600;">桂不動産株式会社</td>
+                <td colspan="2">
+                  <input class="edit-text" id="brokerName" type="text" placeholder="仲介業者名" style="color:#2563a8; font-weight:600;" />
+                </td>
               </tr>
               <tr>
                 <td>所有権移転登記</td>
                 <td class="text-muted">建物2%・土地1.3%</td>
-                <td><input class="edit-num" id="transferTax" type="number" value="0" step="1000" oninput="recalc()" /></td>
+                <td><input class="edit-num" id="transferTax" type="text" placeholder="0" /></td>
               </tr>
               <tr>
                 <td>司法書士手数料</td>
                 <td class="text-muted">概算</td>
-                <td><input class="edit-num" id="scrivenerFee" type="number" value="54000" step="1000" oninput="recalc()" /></td>
+                <td><input class="edit-num" id="scrivenerFee" type="text" placeholder="0" /></td>
               </tr>
               <tr>
                 <td>不動産取得税</td>
                 <td class="text-muted">建物3%・土地1/2×3%</td>
-                <td><input class="edit-num" id="acquiTax" type="number" value="0" step="1000" oninput="recalc()" /></td>
+                <td><input class="edit-num" id="acquiTax" type="text" placeholder="0" /></td>
               </tr>
               <tr>
                 <td>
                   仲介手数料<span class="calc-badge no-print">自動</span>
-                  <!-- 仲介有無トグル -->
                   <div class="broker-toggle-wrap no-print">
-                    <div class="toggle-label">仲介の有無を選択：</div>
+                    <div class="toggle-label">仲介の有無：</div>
                     <div class="toggle-group">
                       <button class="toggle-btn" id="btn-nashi" onclick="setBroker(false)">仲介なし（5%）</button>
-                      <button class="toggle-btn active" id="btn-ari"  onclick="setBroker(true)">仲介あり（3%）</button>
+                      <button class="toggle-btn active" id="btn-ari" onclick="setBroker(true)">仲介あり（3%）</button>
                     </div>
                   </div>
                   <span class="broker-print-label" id="brokerPrintLabel">仲介あり（3%）</span>
                 </td>
                 <td class="text-muted">
                   買取価格 × <span id="buyBrokerRate">3</span>% × 1.1
-                  <span class="badge" id="buyBrokerLabel">売主仲介有の場合</span>
+                  <span class="badge" id="buyBrokerLabel">売主仲介有</span>
                 </td>
                 <td id="buyBrokerFee">— 円</td>
               </tr>
               <tr>
                 <td>収入印紙代</td>
-                <td class="text-muted">500万〜1,000万円以下</td>
-                <td><input class="edit-num" id="buyStamp" type="number" value="5000" step="1000" oninput="recalc()" /></td>
+                <td class="text-muted">契約金額による</td>
+                <td><input class="edit-num" id="buyStamp" type="text" placeholder="0" /></td>
+              </tr>
+              <tr>
+                <td>固定資産税精算</td>
+                <td class="text-muted">引渡日基準・日割精算</td>
+                <td><input class="edit-num" id="propTax" type="text" placeholder="0" /></td>
               </tr>
             </tbody>
             <tfoot><tr>
@@ -466,26 +472,23 @@
     <!-- ⑤ 収支サマリー -->
     <span class="section-title">⑤ 収支サマリー</span>
     <div class="grid-2 mb-24">
-
       <div>
         <div class="card" style="padding:0 0 8px;">
-          <div class="summary-row"><span class="lbl">② 販売価格（売上）</span><span class="val color-blue" id="s-salePrice">—</span></div>
+          <div class="summary-row"><span class="lbl">② 販売価格（売上）</span><span class="val color-blue" id="s-sale">—</span></div>
           <div class="summary-row"><span class="lbl">　− 商品化経費</span><span class="val" id="s-renov">—</span></div>
-          <div class="summary-row"><span class="lbl">　− 販売経費</span><span class="val" id="s-saleExp">—</span></div>
+          <div class="summary-row"><span class="lbl">　− 販売コスト</span><span class="val" id="s-saleExp">—</span></div>
           <div class="summary-row"><span class="lbl">　− 買取経費</span><span class="val" id="s-buyExp">—</span></div>
-          <div class="summary-row"><span class="lbl fw-700">　 諸経費　合計</span><span class="val" id="s-totalExp">—</span></div>
+          <div class="summary-row"><span class="lbl fw-700">　 諸経費　合計</span><span class="val" id="s-total">—</span></div>
         </div>
 
-        <!-- 買取価格 -->
-        <div class="card highlight" style="margin-top:10px; padding: 14px 16px;">
+        <div class="card highlight" style="margin-top:10px; padding:14px 16px;">
           <div style="font-size:12px; color:#4a5568; margin-bottom:6px;">⑥ 買取価格（仕入）</div>
           <div style="display:flex; align-items:baseline; gap:6px;">
-            <input class="edit-num wide" id="buyPrice" type="number" value="32710000"
-                   step="10000" oninput="recalc()"
+            <input class="edit-num wide" id="buyPrice" type="text" placeholder="0"
                    style="font-size:20px; font-weight:800; color:#2563a8; border-color:#2563a8;" />
             <span style="font-size:14px; color:#2563a8; font-weight:600;">円</span>
           </div>
-          <div class="text-muted" style="margin-top:4px;">坪単価　<span id="buyTsuboPrice">35.46</span> 万円</div>
+          <div class="text-muted" style="margin-top:4px;">坪単価　<span id="buyTsuboPrice">—</span> 万円</div>
         </div>
 
         <div class="summary-row total" style="border-radius:6px; margin-top:10px; padding:10px 14px;">
@@ -499,10 +502,8 @@
           <div class="text-muted mb-4">利益額</div>
           <div class="profit-amount" id="p-amount">— 円</div>
           <div class="text-muted" style="margin:4px 0 14px; font-size:12px;">（売上 − 買取価格 − 諸経費）</div>
-
           <hr style="border:none; border-top:1px solid #c6f6d5; margin-bottom:14px;" />
-
-          <div class="text-muted mb-4">利益率</div>
+          <div class="text-muted" style="margin-bottom:4px;">利益率</div>
           <div class="profit-rate" id="p-rate">— %</div>
           <div class="profit-bar-track" style="margin-top:10px;">
             <div class="profit-bar-fill" id="p-bar" style="width:0%;"></div>
@@ -517,7 +518,7 @@
 
     <hr class="divider ref-section" />
 
-    <!-- 税率参考 / 収入印紙早見表 -->
+    <!-- 税率参考 / 収入印紙 -->
     <div class="grid-2 mb-18">
       <div>
         <span class="section-title">税率参考</span>
@@ -525,11 +526,11 @@
           <table class="rate-table">
             <thead><tr><th>税目</th><th>税率</th><th>備考</th></tr></thead>
             <tbody>
-              <tr><td>所有権移転登記税（土地）</td><td class="text-right fw-700">1.5%</td><td class="text-muted">経過措置2021.3.31迄</td></tr>
-              <tr><td>所有権移転登記税（建物）</td><td class="text-right fw-700">2.0%</td><td class="text-muted">住宅用0.3%へ軽減可</td></tr>
-              <tr class="hl"><td>不動産取得税（土地）</td><td class="text-right fw-700">1/2特例</td><td class="text-muted">評価額×2/3対応</td></tr>
-              <tr><td>不動産取得税（建物）</td><td class="text-right fw-700">3.0%</td><td class="text-muted">固定資産税評価額×3%</td></tr>
-              <tr><td>融資費</td><td class="text-right fw-700">10.0%</td><td class="text-muted">仲介手数料等に適用</td></tr>
+              <tr><td>所有権移転登記（土地）</td><td class="fw-700" style="text-align:right;">1.5%</td><td class="text-muted">経過措置2021.3.31迄</td></tr>
+              <tr><td>所有権移転登記（建物）</td><td class="fw-700" style="text-align:right;">2.0%</td><td class="text-muted">住宅用0.3%へ軽減可</td></tr>
+              <tr class="hl"><td>不動産取得税（土地）</td><td class="fw-700" style="text-align:right;">1/2特例</td><td class="text-muted">評価額×2/3対応</td></tr>
+              <tr><td>不動産取得税（建物）</td><td class="fw-700" style="text-align:right;">3.0%</td><td class="text-muted">固定資産税評価額×3%</td></tr>
+              <tr><td>融資費</td><td class="fw-700" style="text-align:right;">10.0%</td><td class="text-muted">仲介手数料等に適用</td></tr>
             </tbody>
           </table>
         </div>
@@ -540,16 +541,16 @@
           <table class="rate-table">
             <thead><tr><th>契約金額</th><th>軽減後（現行）</th><th>本則</th></tr></thead>
             <tbody>
-              <tr><td>〜10万円</td><td class="text-right">0 円</td><td class="text-right text-muted">200 円</td></tr>
-              <tr><td>〜50万円</td><td class="text-right">200 円</td><td class="text-right text-muted">400 円</td></tr>
-              <tr><td>〜100万円</td><td class="text-right">500 円</td><td class="text-right text-muted">1,000 円</td></tr>
-              <tr><td>〜500万円</td><td class="text-right">1,000 円</td><td class="text-right text-muted">2,000 円</td></tr>
-              <tr class="hl"><td>〜1,000万円</td><td class="text-right">5,000 円</td><td class="text-right text-muted">10,000 円</td></tr>
-              <tr><td>〜5,000万円</td><td class="text-right">10,000 円</td><td class="text-right text-muted">20,000 円</td></tr>
-              <tr><td>〜1億円</td><td class="text-right">30,000 円</td><td class="text-right text-muted">60,000 円</td></tr>
-              <tr><td>〜5億円</td><td class="text-right">60,000 円</td><td class="text-right text-muted">100,000 円</td></tr>
-              <tr><td>〜10億円</td><td class="text-right">160,000 円</td><td class="text-right text-muted">200,000 円</td></tr>
-              <tr><td>50億円超</td><td class="text-right">480,000 円</td><td class="text-right text-muted">600,000 円</td></tr>
+              <tr><td>〜10万円</td><td>0 円</td><td class="text-muted">200 円</td></tr>
+              <tr><td>〜50万円</td><td>200 円</td><td class="text-muted">400 円</td></tr>
+              <tr><td>〜100万円</td><td>500 円</td><td class="text-muted">1,000 円</td></tr>
+              <tr><td>〜500万円</td><td>1,000 円</td><td class="text-muted">2,000 円</td></tr>
+              <tr class="hl"><td>〜1,000万円</td><td>5,000 円</td><td class="text-muted">10,000 円</td></tr>
+              <tr><td>〜5,000万円</td><td>10,000 円</td><td class="text-muted">20,000 円</td></tr>
+              <tr><td>〜1億円</td><td>30,000 円</td><td class="text-muted">60,000 円</td></tr>
+              <tr><td>〜5億円</td><td>60,000 円</td><td class="text-muted">100,000 円</td></tr>
+              <tr><td>〜10億円</td><td>160,000 円</td><td class="text-muted">200,000 円</td></tr>
+              <tr><td>50億円超</td><td>480,000 円</td><td class="text-muted">600,000 円</td></tr>
             </tbody>
           </table>
         </div>
@@ -562,55 +563,43 @@
       <div class="card">
         <div style="font-size:13px; font-weight:700; margin-bottom:8px;">■ 開連会社の仕入</div>
         <div class="commission-head">買主仲介有の場合</div>
-        <table class="rate-table mb-12">
+        <table class="rate-table" style="margin-bottom:10px;">
           <thead><tr><th>区分</th><th>料率</th><th>加算</th><th>備考</th></tr></thead>
           <tbody>
-            <tr><td>①売主仲介有</td><td class="text-right">3%</td><td>+0円</td><td>両手6%+6万</td></tr>
-            <tr><td>②売主仲介無</td><td class="text-right">5%</td><td>+0円</td><td>片手5%</td></tr>
-            <tr><td>③業者支払あり</td><td class="text-right">3%</td><td>+6万円</td><td>支払後2%</td></tr>
+            <tr><td>①売主仲介有</td><td style="text-align:right;">3%</td><td>+0円</td><td>両手6%+6万</td></tr>
+            <tr><td>②売主仲介無</td><td style="text-align:right;">5%</td><td>+0円</td><td>片手5%</td></tr>
+            <tr><td>③業者支払あり</td><td style="text-align:right;">3%</td><td>+6万円</td><td>支払後2%</td></tr>
           </tbody>
         </table>
         <div class="commission-head">開連会社の販売</div>
         <table class="rate-table">
           <thead><tr><th>区分</th><th>料率</th><th>加算</th><th>備考</th></tr></thead>
           <tbody>
-            <tr><td>④買主仲介有</td><td class="text-right">3%</td><td>+0円</td><td>両手6%+6万</td></tr>
-            <tr><td>⑤買主仲介無</td><td class="text-right">4%</td><td>+0円</td><td>片手4%</td></tr>
-            <tr><td>⑥業者支払あり</td><td class="text-right">3%</td><td>+6万円</td><td>支払後2%</td></tr>
+            <tr><td>④買主仲介有</td><td style="text-align:right;">3%</td><td>+0円</td><td>両手6%+6万</td></tr>
+            <tr><td>⑤買主仲介無</td><td style="text-align:right;">4%</td><td>+0円</td><td>片手4%</td></tr>
+            <tr><td>⑥業者支払あり</td><td style="text-align:right;">3%</td><td>+6万円</td><td>支払後2%</td></tr>
           </tbody>
         </table>
       </div>
       <div class="card">
         <div style="font-size:13px; font-weight:700; margin-bottom:8px;">■ 桂不動産の仕入</div>
         <div class="commission-head">直仕入 (S直営)</div>
-        <table class="rate-table mb-12">
+        <table class="rate-table" style="margin-bottom:10px;">
           <thead><tr><th>区分</th><th>料率</th><th>加算</th><th>備考</th></tr></thead>
           <tbody>
-            <tr><td>①直仕入</td><td class="text-right">5%</td><td>+0円</td><td>片手5%</td></tr>
-            <tr><td>②業者支払あり</td><td class="text-right">5%</td><td>+6万円</td><td>支払後2%</td></tr>
+            <tr><td>①直仕入</td><td style="text-align:right;">5%</td><td>+0円</td><td>片手5%</td></tr>
+            <tr><td>②業者支払あり</td><td style="text-align:right;">5%</td><td>+6万円</td><td>支払後2%</td></tr>
           </tbody>
         </table>
         <div class="commission-head">桂不動産の販売</div>
         <table class="rate-table">
           <thead><tr><th>区分</th><th>料率</th><th>加算</th><th>備考</th></tr></thead>
           <tbody>
-            <tr><td>③直販売</td><td class="text-right">4%</td><td>+0円</td><td>片手4%</td></tr>
-            <tr><td>④業者支払あり</td><td class="text-right">4%</td><td>+6万円</td><td>支払後2%</td></tr>
+            <tr><td>③直販売</td><td style="text-align:right;">4%</td><td>+0円</td><td>片手4%</td></tr>
+            <tr><td>④業者支払あり</td><td style="text-align:right;">4%</td><td>+6万円</td><td>支払後2%</td></tr>
           </tbody>
         </table>
       </div>
-    </div>
-
-    <!-- 固定資産税精算 -->
-    <span class="section-title">固定資産税精算</span>
-    <div class="card mb-18">
-      <table class="rate-table">
-        <thead><tr><th>区分</th><th>㎡単価</th><th>概算</th><th>精算額</th></tr></thead>
-        <tbody>
-          <tr><td>固定資産税精算額（土地）</td><td>—</td><td>—</td><td class="fw-700 color-blue">0 円</td></tr>
-          <tr><td>固定資産税精算額（建物）</td><td>—</td><td>—</td><td class="fw-700 color-blue">0 円</td></tr>
-        </tbody>
-      </table>
     </div>
 
     <!-- 特記事項 -->
@@ -629,21 +618,54 @@
   </div><!-- /content -->
 
   <div class="page-footer">
-    <span>不動産買取稟議書　— <span id="footerCompany">㈲ビーイング</span></span>
+    <span>不動産買取稟議書　— <span id="footerCompany"></span></span>
     <span id="footerDate"></span>
   </div>
 </div>
 
 <script>
   // ===== State =====
-  let buyBrokerPresent = true; // true = あり(3%), false = なし(5%)
-
-  // ===== Utils =====
-  const TAX = 1.1;
+  let buyBrokerPresent = true;
+  const TAX   = 1.1;
   const TSUBO = 0.3025;
-  const fmt = n => Math.round(n).toLocaleString('ja-JP');
-  const fmtYen = n => fmt(n) + ' 円';
-  const getNum = id => parseFloat(document.getElementById(id).value) || 0;
+
+  // ===== Number formatting =====
+  function parseNum(val) {
+    return parseFloat((val || '').toString().replace(/,/g, '').replace(/[^0-9.-]/g, '')) || 0;
+  }
+  function fmtNum(n) {
+    if (isNaN(n) || n === null) return '';
+    return Math.round(n).toLocaleString('ja-JP');
+  }
+  function fmtYen(n) {
+    return fmtNum(n) + ' 円';
+  }
+  function getVal(id) {
+    const el = document.getElementById(id);
+    return el ? parseNum(el.value) : 0;
+  }
+
+  // Apply comma formatting to all .edit-num inputs
+  function setupNumInputs() {
+    document.querySelectorAll('.edit-num, .amount-input').forEach(el => {
+      el.addEventListener('blur', function() {
+        const raw = parseNum(this.value);
+        this.value = raw ? fmtNum(raw) : '';
+        recalc();
+      });
+      el.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') this.blur();
+      });
+      // Allow only numeric input
+      el.addEventListener('input', function() {
+        let v = this.value.replace(/[^0-9]/g, '');
+        // Format live with commas (keep cursor usable)
+        if (v) this.value = parseInt(v, 10).toLocaleString('ja-JP');
+        else this.value = '';
+        recalc();
+      });
+    });
+  }
 
   // ===== Date =====
   function setDate() {
@@ -653,9 +675,9 @@
     document.getElementById('footerDate').textContent = '作成日：' + s;
   }
 
-  // ===== Company name sync =====
+  // Company name sync
   document.getElementById('companyName').addEventListener('input', function() {
-    document.getElementById('footerCompany').textContent = this.value || '㈲ビーイング';
+    document.getElementById('footerCompany').textContent = this.value;
   });
 
   // ===== Broker toggle =====
@@ -663,94 +685,97 @@
     buyBrokerPresent = present;
     document.getElementById('btn-ari').classList.toggle('active', present);
     document.getElementById('btn-nashi').classList.toggle('active', !present);
-    const rate = present ? 3 : 5;
-    document.getElementById('buyBrokerRate').textContent = rate;
-    document.getElementById('buyBrokerLabel').textContent = present ? '売主仲介有の場合' : '売主仲介無の場合';
+    document.getElementById('buyBrokerRate').textContent  = present ? '3' : '5';
+    document.getElementById('buyBrokerLabel').textContent = present ? '売主仲介有' : '売主仲介無';
     document.getElementById('brokerPrintLabel').textContent = present ? '仲介あり（3%）' : '仲介なし（5%）';
     recalc();
   }
 
-  // ===== Main calculation =====
+  // ===== Recalculate =====
   function recalc() {
-    const salePrice   = getNum('salePrice');
-    const buyPrice    = getNum('buyPrice');
-    const landArea    = getNum('landArea');
-    const buildArea   = getNum('buildArea');
-    const renovCost   = getNum('renovCost');
-    const saleStamp   = getNum('saleStamp');
-    const netCost     = getNum('netCost');
-    const transferTax = getNum('transferTax');
-    const scrivener   = getNum('scrivenerFee');
-    const acquiTax    = getNum('acquiTax');
-    const buyStamp    = getNum('buyStamp');
+    const salePrice = getVal('salePrice');
+    const buyPrice  = getVal('buyPrice');
+    const landArea  = getVal('landArea');
+    const buildArea = getVal('buildArea');
 
     // Tsubo
-    const landTsubo  = landArea * TSUBO;
-    const buildTsubo = buildArea * TSUBO;
-    document.getElementById('landTsubo').textContent =
-      landTsubo > 0 ? landTsubo.toFixed(2) : '—';
-    document.getElementById('buildTsubo').textContent =
-      buildTsubo > 0 ? buildTsubo.toFixed(2) : '—';
+    const lt = landArea  * TSUBO;
+    const bt = buildArea * TSUBO;
+    document.getElementById('landTsubo').textContent  = lt > 0 ? lt.toFixed(2) : '—';
+    document.getElementById('buildTsubo').textContent = bt > 0 ? bt.toFixed(2) : '—';
 
-    // 販売 仲介手数料 (3% × 1.1)
-    const saleBroker = Math.floor(salePrice * 0.03 * TAX);
-    document.getElementById('saleBrokerFee').textContent = fmtYen(saleBroker);
+    // 商品化経費 小計
+    const renov = ['c-survey','c-demo','c-clean','c-interior','c-exterior','c-equip','c-waste','c-other']
+                   .reduce((s, id) => s + getVal(id), 0);
+    document.getElementById('renovSubtotal').textContent = fmtYen(renov);
 
-    // 販売経費合計
-    const saleExpTotal = saleBroker + saleStamp + netCost + renovCost;
-    document.getElementById('saleTotal').textContent = fmtYen(saleExpTotal);
+    // 販売コスト
+    const saleBroker = salePrice > 0 ? Math.floor(salePrice * 0.03 * TAX) : 0;
+    const saleStamp  = getVal('saleStamp');
+    const netCost    = getVal('netCost');
+    const adCost     = getVal('adCost');
+    document.getElementById('saleBrokerFee').textContent = salePrice > 0 ? fmtYen(saleBroker) : '— 円';
 
-    // 買取 仲介手数料
-    const buyRate    = buyBrokerPresent ? 0.03 : 0.05;
-    const buyBroker  = Math.floor(buyPrice * buyRate * TAX);
-    document.getElementById('buyBrokerFee').textContent = fmtYen(buyBroker);
+    const saleSellCost = saleBroker + saleStamp + netCost + adCost;
+    const saleTotal    = renov + saleSellCost;
+    document.getElementById('saleTotal').textContent = salePrice > 0 || renov > 0 ? fmtYen(saleTotal) : '— 円';
 
-    // 買取経費合計
-    const buyExpTotal = transferTax + scrivener + acquiTax + buyBroker + buyStamp;
-    document.getElementById('buyTotal').textContent = fmtYen(buyExpTotal);
+    // 買取経費
+    const transferTax = getVal('transferTax');
+    const scrivener   = getVal('scrivenerFee');
+    const acquiTax    = getVal('acquiTax');
+    const propTax     = getVal('propTax');
+    const buyStamp    = getVal('buyStamp');
+    const buyRate     = buyBrokerPresent ? 0.03 : 0.05;
+    const buyBroker   = buyPrice > 0 ? Math.floor(buyPrice * buyRate * TAX) : 0;
+    document.getElementById('buyBrokerFee').textContent = buyPrice > 0 ? fmtYen(buyBroker) : '— 円';
 
-    // 諸経費合計
-    const allExp = renovCost + saleExpTotal - renovCost + buyExpTotal;
-    // (販売経費合計 already includes renovCost as 商品化経費, avoid double count)
-    // Actually: 諸経費 = 商品化経費 + 販売経費(without renov) + 買取経費
-    //         = renovCost + (saleBroker + saleStamp + netCost) + buyExpTotal
-    const totalExp = renovCost + saleBroker + saleStamp + netCost + buyExpTotal;
-
-    // 利益
-    const profit     = salePrice - buyPrice - totalExp;
-    const profitRate = salePrice > 0 ? profit / salePrice * 100 : 0;
-
-    // 坪単価
-    const saleTsubo = landTsubo > 0 ? (salePrice / landTsubo / 10000).toFixed(2) : '—';
-    const buyTsubo  = landTsubo > 0 ? (buyPrice  / landTsubo / 10000).toFixed(2) : '—';
-    document.getElementById('saleTsuboPrice').textContent = saleTsubo;
-    document.getElementById('buyTsuboPrice').textContent  = buyTsubo;
+    const buyTotal = transferTax + scrivener + acquiTax + buyBroker + buyStamp + propTax;
+    document.getElementById('buyTotal').textContent = buyPrice > 0 ? fmtYen(buyTotal) : '— 円';
 
     // Summary
-    document.getElementById('s-salePrice').textContent = fmtYen(salePrice);
-    document.getElementById('s-renov').textContent     = fmtYen(renovCost);
-    document.getElementById('s-saleExp').textContent   = fmtYen(saleExpTotal);
-    document.getElementById('s-buyExp').textContent    = fmtYen(buyExpTotal);
-    document.getElementById('s-totalExp').textContent  = fmtYen(totalExp);
-    document.getElementById('s-profit').textContent    = fmtYen(profit);
+    const totalExp = renov + saleSellCost + buyTotal;
+    const profit   = (salePrice > 0 && buyPrice > 0) ? salePrice - buyPrice - totalExp : null;
+    const rate     = (profit !== null && salePrice > 0) ? profit / salePrice * 100 : null;
+
+    document.getElementById('s-sale').textContent    = salePrice > 0  ? fmtYen(salePrice) : '—';
+    document.getElementById('s-renov').textContent   = renov > 0      ? fmtYen(renov)     : '— 円';
+    document.getElementById('s-saleExp').textContent = saleSellCost>0 ? fmtYen(saleSellCost) : '— 円';
+    document.getElementById('s-buyExp').textContent  = buyTotal > 0   ? fmtYen(buyTotal)  : '— 円';
+    document.getElementById('s-total').textContent   = totalExp > 0   ? fmtYen(totalExp)  : '— 円';
+    document.getElementById('s-profit').textContent  = profit !== null ? fmtYen(profit)    : '—';
 
     // Profit panel
-    document.getElementById('p-amount').textContent = fmtYen(profit);
-    document.getElementById('p-amount').style.color = profit >= 0 ? '#276749' : '#c53030';
-    document.getElementById('p-rate').textContent   = profitRate.toFixed(2) + ' %';
-    document.getElementById('p-rate').style.color   = profitRate >= 0 ? '#276749' : '#c53030';
+    const pa = document.getElementById('p-amount');
+    const pr = document.getElementById('p-rate');
+    if (profit !== null) {
+      pa.textContent = fmtYen(profit);
+      pa.style.color = profit >= 0 ? '#276749' : '#c53030';
+      pr.textContent = rate.toFixed(2) + ' %';
+      pr.style.color = rate >= 0 ? '#276749' : '#c53030';
+      const bw = Math.min(Math.max(rate / 10 * 100, 0), 100);
+      const bar = document.getElementById('p-bar');
+      bar.style.width = bw + '%';
+      bar.style.background = rate >= 5 ? 'linear-gradient(90deg,#38a169,#68d391)'
+                           : rate >= 0 ? 'linear-gradient(90deg,#d69e2e,#f6e05e)'
+                                       : 'linear-gradient(90deg,#c53030,#fc8181)';
+    } else {
+      pa.textContent = '— 円';
+      pr.textContent = '— %';
+      document.getElementById('p-bar').style.width = '0%';
+    }
 
-    const barWidth = Math.min(Math.max(profitRate / 10 * 100, 0), 100);
-    document.getElementById('p-bar').style.width = barWidth + '%';
-    document.getElementById('p-bar').style.background =
-      profitRate >= 5 ? 'linear-gradient(90deg,#38a169,#68d391)' :
-      profitRate >= 0 ? 'linear-gradient(90deg,#d69e2e,#f6e05e)' :
-                        'linear-gradient(90deg,#c53030,#fc8181)';
+    // 坪単価
+    const st = lt > 0 && salePrice > 0 ? (salePrice / lt / 10000).toFixed(2) : '—';
+    const bt2= lt > 0 && buyPrice  > 0 ? (buyPrice  / lt / 10000).toFixed(2) : '—';
+    document.getElementById('saleTsuboPrice').textContent = st;
+    document.getElementById('buyTsuboPrice').textContent  = bt2;
   }
 
   // ===== Init =====
   setDate();
-  setBroker(true); // default: 仲介あり
+  setupNumInputs();
+  setBroker(true);
 </script>
 </body>
 </html>
