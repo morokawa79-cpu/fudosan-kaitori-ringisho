@@ -42,29 +42,29 @@
     .print-btn:hover { background:rgba(255,255,255,.32); }
 
     /* ===== Layout ===== */
-    .content { padding:24px 32px 32px; }
-    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-    .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
-    .mb-12 { margin-bottom:12px; }
-    .mb-18 { margin-bottom:18px; }
-    .mb-24 { margin-bottom:24px; }
-    .divider { border:none; border-top:1px solid #e2e8f0; margin:20px 0; }
+    .content { padding:14px 24px 20px; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+    .mb-12 { margin-bottom:8px; }
+    .mb-18 { margin-bottom:12px; }
+    .mb-24 { margin-bottom:14px; }
+    .divider { border:none; border-top:1px solid #e2e8f0; margin:12px 0; }
 
     /* ===== Section title ===== */
     .section-title {
-      font-size:12px; font-weight:700; color:#2563a8; letter-spacing:.08em;
-      border-bottom:2px solid #2563a8; padding-bottom:4px; margin-bottom:12px; display:block;
+      font-size:11px; font-weight:700; color:#2563a8; letter-spacing:.08em;
+      border-bottom:2px solid #2563a8; padding-bottom:3px; margin-bottom:8px; display:block;
     }
 
     /* ===== Cards ===== */
-    .card { background:#f7fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px 20px; margin-bottom:18px; }
+    .card { background:#f7fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:10px; }
     .card.hl  { background:#ebf4ff; border-color:#90cdf4; }
     .card.ok  { background:#f0fff4; border-color:#68d391; }
     .card.warn{ background:#fffbeb; border-color:#f6e05e; }
 
     /* ===== Info table ===== */
     .info-table { width:100%; border-collapse:collapse; }
-    .info-table th,.info-table td { padding:7px 10px; border-bottom:1px solid #e2e8f0; text-align:left; }
+    .info-table th,.info-table td { padding:4px 8px; border-bottom:1px solid #e2e8f0; text-align:left; }
     .info-table th { width:140px; color:#718096; font-weight:600; font-size:12px; white-space:nowrap; }
     .info-table tr:last-child th,.info-table tr:last-child td { border-bottom:none; }
     .info-table .eval-row th { color:#5a67d8; background:#ebf4ff; }
@@ -88,19 +88,19 @@
     /* ===== Price hero ===== */
     .price-hero {
       background:linear-gradient(90deg,#1a3c6e 0%,#3b82f6 100%);
-      border-radius:8px; color:#fff; padding:14px 22px;
-      display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-bottom:18px;
+      border-radius:8px; color:#fff; padding:10px 18px;
+      display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:12px;
     }
-    .price-hero .label { font-size:12px; opacity:.82; }
+    .price-hero .label { font-size:11px; opacity:.82; }
     .price-hero .amount-wrap { display:flex; align-items:baseline; gap:6px; }
     .price-hero .amount-input {
       background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,.5);
-      color:#fff; font-size:28px; font-weight:800; font-family:inherit;
-      width:260px; text-align:right; outline:none;
+      color:#fff; font-size:24px; font-weight:800; font-family:inherit;
+      width:230px; text-align:right; outline:none;
     }
     .price-hero .amount-input:focus { border-bottom-color:#fff; background:rgba(255,255,255,.1); border-radius:3px; }
-    .price-hero .unit { font-size:16px; font-weight:600; }
-    .price-hero .tsubo { font-size:12px; opacity:.75; margin-top:2px; }
+    .price-hero .unit { font-size:14px; font-weight:600; }
+    .price-hero .tsubo { font-size:11px; opacity:.75; margin-top:1px; }
 
     /* ===== Expense table ===== */
     .expense-table { width:100%; border-collapse:collapse; }
@@ -108,11 +108,11 @@
       background:#2563a8; color:#fff; padding:7px 10px; font-size:12px; text-align:left;
     }
     .expense-table thead th:last-child { text-align:right; }
-    .expense-table tbody td { padding:5px 10px; border-bottom:1px solid #e2e8f0; font-size:13px; vertical-align:middle; }
+    .expense-table tbody td { padding:3px 8px; border-bottom:1px solid #e2e8f0; font-size:12px; vertical-align:middle; }
     .expense-table tbody td:last-child { text-align:right; white-space:nowrap; }
     .expense-table tbody tr:nth-child(even) td { background:#f7fafc; }
     .expense-table tfoot td {
-      padding:9px 10px; font-weight:700; background:#ebf4ff; border-top:2px solid #90cdf4;
+      padding:5px 8px; font-weight:700; background:#ebf4ff; border-top:2px solid #90cdf4;
     }
     .expense-table tfoot td:last-child { text-align:right; color:#2563a8; }
 
@@ -161,7 +161,7 @@
     /* ===== Summary ===== */
     .sum-row {
       display:flex; justify-content:space-between; align-items:center;
-      padding:8px 12px; border-bottom:1px dashed #e2e8f0; font-size:13px;
+      padding:4px 10px; border-bottom:1px dashed #e2e8f0; font-size:12px;
     }
     .sum-row:last-child { border-bottom:none; }
     .sum-row .lbl { color:#4a5568; }
@@ -286,10 +286,10 @@
       .sum-row.total { padding:4px 8px !important; border-radius:2px !important; }
       .sum-row.total .val { font-size:11pt !important; }
 
-      /* ---- Profit card ---- */
-      .profit-card { padding:6px 10px !important; }
-      .profit-amount { font-size:14pt !important; }
-      .profit-rate   { font-size:11pt !important; }
+      /* ---- Profit banner ---- */
+      #profit-banner { padding:8px 14px !important; border-radius:4px !important; }
+      #p-amount { font-size:16pt !important; }
+      #p-rate   { font-size:14pt !important; }
 
       /* ---- Buy price card ---- */
       #buyPrice { font-size:13pt !important; }
@@ -560,39 +560,44 @@
 
     <!-- ⑤ 収支サマリー -->
     <span class="section-title">⑤ 収支サマリー</span>
-    <div class="grid-2 mb-24">
+    <div class="grid-2 mb-12">
+      <!-- 左：内訳 -->
       <div>
-        <div class="card" style="padding:0 0 8px;">
+        <div class="card" style="padding:0 0 4px; margin-bottom:8px;">
           <div class="sum-row"><span class="lbl">② 販売価格（売上）</span><span class="val color-blue" id="s-sale">—</span></div>
           <div class="sum-row"><span class="lbl">　− 商品化経費</span><span class="val" id="s-renov">—</span></div>
           <div class="sum-row"><span class="lbl">　− 販売コスト</span><span class="val" id="s-saleExp">—</span></div>
           <div class="sum-row"><span class="lbl">　− 買取経費</span><span class="val" id="s-buyExp">—</span></div>
-          <div class="sum-row"><span class="lbl fw-700">　 諸経費　合計</span><span class="val" id="s-total">—</span></div>
-        </div>
-        <div class="card hl" style="margin-top:10px;padding:14px 16px;">
-          <div style="font-size:12px;color:#4a5568;margin-bottom:6px;">⑥ 買取価格（仕入）</div>
-          <div style="display:flex;align-items:baseline;gap:6px;">
-            <input class="edit-num wide" id="buyPrice" type="text" placeholder="0"
-                   style="font-size:20px;font-weight:800;color:#2563a8;border-color:#2563a8;" />
-            <span style="font-size:14px;color:#2563a8;font-weight:600;">円</span>
-          </div>
-          <div class="text-muted" style="margin-top:4px;">坪単価　<span id="buyTsuboPrice">—</span> 万円</div>
-        </div>
-        <div class="sum-row total" style="border-radius:6px;margin-top:10px;padding:10px 14px;">
-          <span class="lbl">⑦ 利益額（売上 − 買取 − 諸経費）</span>
-          <span class="val" id="s-profit">—</span>
+          <div class="sum-row" style="border-top:1px solid #e2e8f0;border-bottom:none;"><span class="lbl fw-700">諸経費　合計</span><span class="val" id="s-total">—</span></div>
         </div>
       </div>
-
+      <!-- 右：買取価格 -->
       <div>
-        <div class="card ok profit-card">
-          <div class="text-muted" style="margin-bottom:4px;">利益額</div>
-          <div class="profit-amount" id="p-amount">— 円</div>
-          <div class="text-muted" style="margin:4px 0 14px;font-size:12px;">（売上 − 買取価格 − 諸経費）</div>
-          <hr style="border:none;border-top:1px solid #c6f6d5;margin-bottom:14px;" />
-          <div class="text-muted" style="margin-bottom:4px;">利益率</div>
-          <div class="profit-rate" id="p-rate">— %</div>
+        <div class="card hl" style="padding:10px 14px;">
+          <div style="font-size:11px;color:#4a5568;margin-bottom:4px;">⑥ 買取価格（仕入）</div>
+          <div style="display:flex;align-items:baseline;gap:6px;">
+            <input class="edit-num wide" id="buyPrice" type="text" placeholder="0"
+                   style="font-size:18px;font-weight:800;color:#2563a8;border-color:#2563a8;" />
+            <span style="font-size:13px;color:#2563a8;font-weight:600;">円</span>
+          </div>
+          <div class="text-muted" style="margin-top:3px;">坪単価　<span id="buyTsuboPrice">—</span> 万円</div>
         </div>
+      </div>
+    </div>
+
+    <!-- ⑦ 利益ハイライト（全幅・最目立ち） -->
+    <div id="profit-banner" class="mb-12" style="
+      background:linear-gradient(135deg,#1a4731 0%,#276749 60%,#38a169 100%);
+      border-radius:10px; color:#fff; padding:14px 24px;
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    ">
+      <div>
+        <div style="font-size:11px;opacity:.8;margin-bottom:3px;">⑦ 利益額（売上 − 買取 − 諸経費）</div>
+        <div style="font-size:30px;font-weight:800;letter-spacing:.02em;" id="p-amount">— 円</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:11px;opacity:.8;margin-bottom:3px;">利益率</div>
+        <div style="font-size:28px;font-weight:800;" id="p-rate">— %</div>
       </div>
     </div>
 
@@ -817,19 +822,22 @@ function recalc() {
   document.getElementById('s-saleExp').textContent = saleSellCost>0 ? fmtY(saleSellCost) : '— 円';
   document.getElementById('s-buyExp').textContent  = buyTotalVal>0  ? fmtY(buyTotalVal)  : '— 円';
   document.getElementById('s-total').textContent   = totalExp > 0   ? fmtY(totalExp)     : '— 円';
-  document.getElementById('s-profit').textContent  = profit !== null ? fmtY(profit)       : '—';
 
   // 利益パネル
   const pa = document.getElementById('p-amount');
   const pr = document.getElementById('p-rate');
+  const banner = document.getElementById('profit-banner');
   if (profit !== null) {
     pa.textContent = fmtY(profit);
-    pa.style.color = profit >= 0 ? '#276749' : '#c53030';
     pr.textContent = rate.toFixed(2) + ' %';
-    pr.style.color = rate >= 0 ? '#276749' : '#c53030';
+    const ok = profit >= 0;
+    banner.style.background = ok
+      ? 'linear-gradient(135deg,#1a4731 0%,#276749 60%,#38a169 100%)'
+      : 'linear-gradient(135deg,#742a2a 0%,#c53030 60%,#fc8181 100%)';
   } else {
-    pa.textContent = '— 円';  pa.style.color = '#276749';
-    pr.textContent = '— %';   pr.style.color = '#276749';
+    pa.textContent = '— 円';
+    pr.textContent = '— %';
+    banner.style.background = 'linear-gradient(135deg,#1a4731 0%,#276749 60%,#38a169 100%)';
   }
 
   // 坪単価
